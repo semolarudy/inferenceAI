@@ -1,0 +1,122 @@
+Sat Feb 24 23:14:15 2018
+
+
+Moral links:
+
+
+
+Triangulating prime component with 2 members:
+    C5, C2
+This component is a clique of cost 4
+
+Triangulating prime component with 2 members:
+    C6, C3
+This component is a clique of cost 4
+
+Triangulating prime component with 2 members:
+    C2, C1
+This component is a clique of cost 4
+
+Triangulating prime component with 2 members:
+    C3, C1
+This component is a clique of cost 4
+
+Triangulating prime component with 2 members:
+    C4, C1
+This component is a clique of cost 4
+
+
+Total cost of triangulation for all prime components is 20
+
+
+Elimination sequence:
+
+    C5
+    C2
+    C6
+    C3
+    C4
+    C1
+
+
+Cliques:
+
+Clique 5, 2 members, table size = 4:
+    C1, C4
+
+Clique 4, 2 members, table size = 4:
+    C1, C3
+
+Clique 3, 2 members, table size = 4:
+    C3, C6
+
+Clique 2, 2 members, table size = 4:
+    C1, C2
+
+Clique 1, 2 members, table size = 4:
+    C2, C5
+
+Total clique table size: 20
+
+
+The junction forest:
+
+Creating junction tree with clique 5 as root ...
+
+Cliques 4 and 5 linked, separator has 1 member and table size = 2:
+    C1
+
+Cliques 3 and 4 linked, separator has 1 member and table size = 2:
+    C3
+
+Cliques 2 and 5 linked, separator has 1 member and table size = 2:
+    C1
+
+Cliques 1 and 2 linked, separator has 1 member and table size = 2:
+    C2
+
+
+Assignment of potentials to cliques:
+
+    Node C6 assigned to clique 3
+    Node C5 assigned to clique 1
+    Node C4 assigned to clique 5
+    Node C3 assigned to clique 4
+    Node C2 assigned to clique 2
+    Node C1 assigned to clique 5
+
+
+Checking conditional probability potentials:
+
+Warning: Conditional distributions for C4 sum to different values:
+    min = 0.118
+    max = 1
+
+    No errors found
+
+
+Beliefs for chance nodes:
+
+    C6:
+	1          0.3906
+	0          0.6094
+
+    C5:
+	1          0.8675
+	0          0.1325
+
+    C4:
+	1          0.815254
+	0          0.184746
+
+    C3:
+	1          0.455
+	0          0.545
+
+    C2:
+	1          0.825
+	0          0.175
+
+    C1:
+	1          0.5
+	0          0.5

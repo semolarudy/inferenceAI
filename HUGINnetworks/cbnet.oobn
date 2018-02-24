@@ -1,0 +1,135 @@
+class cbnet
+{
+    inputs = ();
+    outputs = ();
+    node_size = (80 40);
+    HR_DBN_Num_Slices = "5";
+    HR_Desc = "";
+    HR_OOBN_CheckConsistency = "1";
+    HR_OOBN_FitExpand = "1";
+    HR_Zoom_ZoomFactor = "100";
+    HR_Groups_GroupColors = "";
+    HR_Groups_GroupNames = "";
+    HR_Groups_UserGroupsNo = "0";
+    HR_Utility_Link = "63";
+    HR_Probabilistic_Link = "63";
+    HR_Functional_Link = "63";
+    HR_Binding_Link = "63";
+    HR_Information_Arc = "63";
+    HR_Color_Interface = "21";
+    HR_Color_Instance = "0";
+    HR_Color_DiscreteFunction = "5";
+    HR_Color_Function = "4";
+    HR_Color_Utility = "36";
+    HR_Color_Decision = "17";
+    HR_Color_ContinuousChance = "48";
+    HR_Color_DiscreteChance = "16";
+    HR_Monitor_InitSD = "2";
+    HR_Monitor_Utility_Arrange = "0";
+    HR_Monitor_Mean_Variance = "1";
+    HR_Monitor_Chance_Utility = "1";
+    HR_Monitor_InitStates = "5";
+    HR_Monitor_OpenGraph = "0";
+    HR_Monitor_GraphPrecision = "100";
+    HR_Monitor_AutoUpdGraph = "0";
+    HR_Compile_MaxMinimalSeparators = "100000";
+    HR_Compile_ApproxEpsilon = "1.0E-5";
+    HR_Compile_Approximate = "0";
+    HR_Compile_SaveToMemory = "0";
+    HR_Compile_Compress = "0";
+    HR_Compile_TriangMethod = "0";
+    HR_Propagate_AutoNormal = "1";
+    HR_Propagate_AutoSum = "1";
+    HR_Propagate_Auto = "1";
+    HR_Font_Italic = "0";
+    HR_Font_Weight = "400";
+    HR_Font_Size = "-12";
+    HR_Font_Name = "javax.swing.plaf.FontUIResource[family=Dialog,name=Dialog,style=bold,size=12]";
+    HR_Grid_GridShow = "0";
+    HR_Grid_GridSnap = "0";
+    HR_Grid_Y = "40";
+    HR_Grid_X = "40";
+
+    node C6
+    {
+	label = "";
+	position = (198 302);
+	states = ("1" "0");
+    }
+
+    node C5
+    {
+	label = "";
+	position = (520 204);
+	states = ("1" "0");
+    }
+
+    node C4
+    {
+	label = "";
+	position = (337 199);
+	states = ("1" "0");
+    }
+
+    node C3
+    {
+	label = "";
+	position = (114 205);
+	states = ("1" "0");
+	HR_LinkGroup = "[C6:0]";
+	HR_LinkMode = "[C6:0]";
+    }
+
+    node C2
+    {
+	label = "";
+	position = (437 133);
+	states = ("1" "0");
+	HR_LinkGroup = "[C5:0]";
+	HR_LinkMode = "[C5:0]";
+    }
+
+    node C1
+    {
+	label = "";
+	position = (215 123);
+	states = ("1" "0");
+	HR_LinkGroup = "[C3:0][C4:0][C2:0]";
+	HR_LinkMode = "[C3:0][C4:0][C2:0]";
+    }
+
+    potential (C6 | C3)
+    {
+	data = (( 0.02 0.98 )	%  C3=1
+		( 0.7 0.3 ));	%  C3=0
+    }
+
+    potential (C5 | C2)
+    {
+	data = (( 0.85 0.15 )	%  C2=1
+		( 0.95 0.05 ));	%  C2=0
+    }
+
+    potential (C4 | C1)
+    {
+	data = (( 0.098 0.02 )	%  C1=1
+		( 0.8 0.2 ));	%  C1=0
+    }
+
+    potential (C3 | C1)
+    {
+	data = (( 0.01 0.99 )	%  C1=1
+		( 0.9 0.1 ));	%  C1=0
+    }
+
+    potential (C2 | C1)
+    {
+	data = (( 0.9 0.1 )	%  C1=1
+		( 0.75 0.25 ));	%  C1=0
+    }
+
+    potential (C1)
+    {
+	data = ( 0.5 0.5 );
+    }
+} % class cbnet
